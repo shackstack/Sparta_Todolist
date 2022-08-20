@@ -29,3 +29,9 @@ background-color: #fff;
 border: 2px solid green;
 background-color: #fff;
 }
+
+.list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}

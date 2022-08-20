@@ -13,6 +13,8 @@ export default function Form({ todoList, setTodoList }) {
       { id: nextId.current, title: inputT, contents: inputC, process: true },
     ]);
     nextId.current += 1;
+    setInputT("");
+    setInputC("");
   };
 
   return (
@@ -22,7 +24,7 @@ export default function Form({ todoList, setTodoList }) {
           <label className="form-label">제목</label>
           <input
             value={inputT} //인풋 값은 inputT
-            onChange={(event1) => setInputT(event1.target.value)} //inputT 값을 텍스트상자 타겟 값으로 바꿔줘
+            onChange={(event) => setInputT(event.target.value)} //inputT 값을 텍스트상자 타겟 값으로 바꿔줘
             type="text"
             name="title"
             className="add-input input-body"
@@ -30,7 +32,7 @@ export default function Form({ todoList, setTodoList }) {
           <label className="form-label">내용</label>
           <input
             value={inputC}
-            onChange={(event2) => setInputC(event2.target.value)}
+            onChange={(event) => setInputC(event.target.value)}
             type="text"
             name="body"
             className="add-input"

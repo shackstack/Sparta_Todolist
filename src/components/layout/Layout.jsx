@@ -8,7 +8,7 @@ export default function Layout() {
   const [todoList, setTodoList] = useState([]);
 
   return (
-    <div>
+    <div className="layout">
       <Header />
       <Form todoList={todoList} setTodoList={setTodoList} />
       {console.log(todoList)}
